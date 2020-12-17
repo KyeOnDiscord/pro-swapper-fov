@@ -40,7 +40,8 @@
         </TabControl>
         <TextBox x:Name="fndir" HorizontalAlignment="Left" Height="25" Margin="168,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="527" Background="#FF484848" Foreground="White" BorderThickness="0" IsReadOnly="True" FontSize="11"/>
         <Label Content="Fortnite Config File Location:" HorizontalAlignment="Left" Height="25" Margin="0,10,0,0" VerticalAlignment="Top" Width="168" Foreground="White"/>
-        <Button x:Name="launchfn" Content="Launch Fortnite" HorizontalAlignment="Left" Height="30" Margin="300,381,0,0" VerticalAlignment="Top" Width="155" BorderThickness="1" Background="#FF212121" BorderBrush="White" Foreground="White" Click="setresbutton_Click"/>
+        <Button x:Name="launchfn" Content="Launch Fortnite" HorizontalAlignment="Left" Height="30" Margin="300,378,0,0" VerticalAlignment="Top" Width="155" BorderThickness="1" Background="#FF212121" BorderBrush="White" Foreground="White" Click="launchfn_Click"/>
+        <Button x:Name="reset" Content="Reset FOV/Stretched Res" HorizontalAlignment="Left" Height="30" Margin="135,378,0,0" VerticalAlignment="Top" Width="150" BorderThickness="1" Background="#FF212121" BorderBrush="White" Foreground="White" Click="reset_Click"/>
 
     </Grid>
 

@@ -2,6 +2,8 @@
 using System.Windows.Input;
 using System.IO;
 using ProSwapperFOV.Properties;
+using System.Windows.Forms;
+using System.Diagnostics;
 namespace ProSwapperFOV
 {
     /// <summary>
@@ -35,14 +37,27 @@ namespace ProSwapperFOV
         private void setfov_Click(object sender, RoutedEventArgs e)
         {
             int fovval = (int)FOVSlider.Value;
-            GameFileEditor.SetRes(fovval.ToString(), "1920");
-            MessageBox.Show("Set FOV to " + fovval, "Pro Swapper FOV", MessageBoxButton.OK, MessageBoxImage.Information);
+            GameFileEditor.SetRes(fovval.ToString(), Screen.PrimaryScreen.Bounds.Width.ToString());
+            System.Windows.Forms.MessageBox.Show("Set FOV to " + fovval, "Pro Swapper FOV", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void setresbutton_Click(object sender, RoutedEventArgs e)
         {
             GameFileEditor.SetRes(xres.Text, yres.Text);
-            MessageBox.Show("Set Resolution to " + xres.Text + " x " + yres.Text, "Pro Swapper Resolution Changer", MessageBoxButton.OK, MessageBoxImage.Information);
+            System.Windows.Forms.MessageBox.Show("Set Resolution to " + xres.Text + " x " + yres.Text, "Pro Swapper Resolution Changer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void reset_Click(object sender, RoutedEventArgs e)
+        {
+            string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
+            string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
+            GameFileEditor.SetRes(screenHeight, screenWidth);
+            System.Windows.Forms.MessageBox.Show("Set Resolution to " + screenWidth + " x " + screenHeight, "Pro Swapper Resolution Changer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void launchfn_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("com.epicgames.launcher://apps/Fortnite?action=launch&silent=false");
         }
     }
 }
