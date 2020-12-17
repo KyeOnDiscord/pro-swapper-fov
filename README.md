@@ -6,5 +6,7 @@ Fortnite FOV &amp; Stretched Resolution
 
 #### Features:
 Change Fortnite FOV
+
 Change Fortnite Resolution (Stretched Resolution)
+
 Made in WPF (hehe my first one)
